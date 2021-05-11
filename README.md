@@ -8,7 +8,7 @@ While there are no prior requirements on knowing R, it is expected that the stud
 It is mandatory to have R (https://www.r-project.org) and RStudio (https://rstudio.com/products/rstudio) installed on your computer, prior to the starting date (https://r4ds.had.co.nz/introduction.html#prerequisites).
 Also make sure that both R and RStudio are update. If you have any troubles installing it, please email me at least 24h in advance.
 
-##### Below some TODO before starting the class on Thursday. It is extremely important that this is done BEFORE the course starts. Installing some packages and downloading the data might take some considerable time.
+##### Below some TODO before starting the class on Monday. It is extremely important that this is done BEFORE the course starts. Installing some packages and downloading the data might take some considerable time.
 
 #### Create an R Project.
 
