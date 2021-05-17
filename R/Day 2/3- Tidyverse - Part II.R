@@ -73,7 +73,7 @@ diamonds %>%
   filter(clarity == "I1") %>%
   ggplot() + # starts graph
   geom_point(aes(carat, depth, color = cut, size = price),
-             alpha = .7) # type of graph
+             alpha = .4) # type of graph
 
 diamonds %>%
   filter(clarity == "I1") %>%

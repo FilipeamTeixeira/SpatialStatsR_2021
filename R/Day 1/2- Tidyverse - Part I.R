@@ -9,10 +9,10 @@ library(tidyverse)
 iris %>%
   as_tibble()
 
-iris %>%
-  as_tibble() %>%
-  filter(Species == "setosa") %>%
-  summarise(mean_length = mean(Sepal.Length))
+iris %>% #1
+  as_tibble() %>% #2
+  filter(Species == "setosa") %>% #3
+  summarise(mean_length = mean(Sepal.Length)) #4
 
 # Tibbles
 

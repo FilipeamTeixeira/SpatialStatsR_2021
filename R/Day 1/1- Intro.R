@@ -91,7 +91,7 @@ for(i in 1:10){
 }
 
 for(i in 1:10){ #1
-  cal_i <- i^2 #2
+  cal_i <- (i^2)+2 #2
   print(cal_i) #3
 }
 
@@ -133,7 +133,7 @@ df_names <- covid_full
 colnames(df_names) <- c("Date", "Province", "Region", "Age",
                         "Sex", "Number of cases")
 
-data.frame(`student names` = c("john", "Peter"))
+#data.frame(`student names` = c("john", "Peter"))
 
 head(covid_csv)
 
