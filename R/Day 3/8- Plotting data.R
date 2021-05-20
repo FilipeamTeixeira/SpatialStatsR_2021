@@ -88,6 +88,7 @@ be_new <- rgdal::readOGR("data/covid/be_mun.geojson")
 
 # create color palette for leaflet
 factpal <- colorFactor(c("#1DACE8", "#F24D29", "#76A08A"), be_new$region)
+#~factpal(region)
 
 
 leaflet(be_new) %>%

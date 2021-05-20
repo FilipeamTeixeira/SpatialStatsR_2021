@@ -42,7 +42,7 @@ hist(pop_log) # better
 # 11.a.i
 # Quadrat Density
 
-quad_count <- quadratcount(starbucks, nx= 6, ny=3)
+quad_count <- quadratcount(starbucks, nx= 10, ny=5)
 
 plot(starbucks, pch=20, cols="#1DACE8", main="Quadrat Count")  # Plot points
 plot(quad_count, add=TRUE, col="#76A08A", lwd=.3)  # Add quadrat grid

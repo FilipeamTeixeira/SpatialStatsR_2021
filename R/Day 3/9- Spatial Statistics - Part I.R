@@ -71,7 +71,8 @@ rst.m <- mask(rst, W)
 tm_shape(rst.m) +
   tm_raster(n=10,palette = "RdBu", auto.palette.mapping = FALSE,
             title="Predicted precipitation \n(in inches)") +
-  tm_shape(P) + tm_dots(size=0.2) +
+  tm_shape(P) +
+  tm_dots(size=0.2) +
   tm_legend(legend.outside=TRUE)
 
 # NOTE: replace th_shape(rst.m) by th_shape(rst) ("unclipped" map)
