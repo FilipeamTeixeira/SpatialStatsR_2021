@@ -11,7 +11,7 @@
 #### sf/sp ####
 library(sf)
 
-st_layers("data/be_shapefile/flanders.shp")
+st_layers("data/be_shapefile/flanders.shp") #query the data
 
 be_shp <- st_read("data/be_shapefile/flanders.shp")
 plot(st_geometry(be_shp))
@@ -24,6 +24,7 @@ plot(be_geojson["province"]) # plot by province
 
 #plot with ggplot2
 library(ggplot2)
+
 ggplot(be_geojson) +
   geom_sf(aes(fill = province), lwd = .1) +
   theme_void()

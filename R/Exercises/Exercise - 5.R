@@ -5,6 +5,7 @@ library(tidyverse)
 library(data.table)
 
 # 1- Import cab/taxi data (cab_data.csv) and find the best/faster way to import the file
+unzip("data/cab_data.zip", exdir = "data/")
 cab <- fread("data/cab_data.csv")
 
 # 2.1- Summarise and count occurrences per day of the week per PULocation
@@ -33,7 +34,7 @@ cab_dt <- cab[,.(day = weekdays(mdy_hms(pickup_datetime)))][,.(observations = .N
 # NOTE: Text data is in US format (mm/dd/yyyy)
 library(lubridate)
 
-cab_dt <- cab_dt %>%
+cab_dt <- cab %>%
   mutate(pickup_datetime = mdy_hms(pickup_datetime),
          dropoff_datetime = mdy_hms(dropoff_datetime))
 

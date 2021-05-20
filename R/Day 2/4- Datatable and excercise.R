@@ -3,7 +3,7 @@
 #### data.table ####
 library(data.table)
 
-covid <- data.table::fread("data/covid/conf_cases_mun.csv")
+covid <- fread("data/covid/conf_cases_mun.csv")
 class(covid) # we see data.table and data.frame
 
 # ignore this bit. run it only to "clean the data"
@@ -36,17 +36,19 @@ covid[city_nl == "Gent", .(date, cases)] # note the .() !!!!!! SUPER IMPORTANT
 covid[city_nl == "Gent", sum(cases)]
 
 # combine everything and group with by
-covid[,.(sum_cases = sum(cases)), by = city_nl][order(-sum_cases)]
+covid[,.(sum_cases = sum(cases)), by = c("city_nl", "province")][order(-sum_cases)]
 
 # count observations
-covid[,.(sum_cases = sum(cases), observations = .N), by = city_nl][order(-sum_cases)]
+covid[,.(sum_cases = sum(cases), observations = .N),
+      by = c("city_nl", "province")][order(-sum_cases)]
 # .N counts for data.table objects the number of observations
+# same as n() in dplyr (tidyverse)
 
 # opperations with := (data.table's mutate)
 colnames(covid)
 class(covid$date)
 
-covid[ ,date_char:=as.character(date)]
+covid[ ,date_char:= as.character(date)]
 
 # covid[ , date_char := as.character(date)]
 # This won't work. Can you spot the difference?
